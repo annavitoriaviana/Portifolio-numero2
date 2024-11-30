@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio de Anna Vitória Viana</title>
+</head>
+<body>
+
+<header>
+    <div class="interface">
+        <div class="logo">
+            <a href="#">
+                <img src="images/logo (2).png" alt="Logo do Portfólio" style="width: 50px; height: 50px;">
+            </a>
+        </div>
+    </div>
+    <nav class="menu-desktop">
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#especialidade">Especialidade</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+        </ul>
+    </nav>
+    <div class="theme-switcher">
+        <button onclick="setTheme('light')">Modo Claro</button>
+        <button onclick="setTheme('dark')">Modo Escuro</button>
+        <button onclick="setTheme('night')">Luz Noturna</button>
+    </div>
+    <script>
+        function setTheme(theme) {
+    // Remove todas as classes de tema
+    document.body.classList.remove('light-mode', 'dark-mode', 'night-mode');
+    // Adiciona a classe correspondente ao tema selecionado
+    document.body.classList.add(`${theme}-mode`);
+    // Armazena o tema no localStorage para manter a escolha ao recarregar a página
+    localStorage.setItem('theme', theme);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'light'; // Padrão: claro
+    setTheme(savedTheme);
+});
+
+    </script>
+    
+</header>
+
+<main>
+    <section id="inicio" class="topo-do-site">
+        <div class="interface">
+            <div class="flex">
+                <div class="txt-topo-site">
+                    <h1>Anna Vitória Viana</h1>
+                    <p>Sou estudante de TI, atualmente no 4º semestre de Análise e Desenvolvimento de Sistemas, buscando oportunidades para aplicar meus conhecimentos e crescer na área.</p>
+                </div>
+                <div class="img-topo-site">
+                    <img src="images/pessoa.png" alt="Minha imagem">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ícones de redes sociais próximos à seção Início -->
+        <div class="btn-social">
+            <a href="https://www.instagram.com/anna_vianavivi/profilecard/?igsh=MXN1MnRuMGZzeWhlMw=="><button><i class="bi bi-instagram"></i></button></a>
+            <a href="https://github.com/Annavitoriads/AnnaVit-riaViana"><button><i class="bi bi-github"></i></button></a>
+            <a href="https://www.linkedin.com/in/anna-vit%C3%B3ria-viana-4581021ab"><button><i class="bi bi-linkedin"></i></button></a>
+        </div>
+    </section>
+
+    <section id="especialidade" class="Especialidade">
+        <div class="interface">
+            <h2 class="título">MINHAS <span>ESPECIALIDADES.</span></h2>
+            <div class="flex">
+                <div class="Especialidades-box">
+                    <i class="bi bi-award-fill"></i>
+                    <h3>FRONT-END.</h3>
+                    <p>Possuo conhecimentos em banco de dados e estou em processo de aprimoramento contínuo nessa área. Trabalho com o design, consulta e gerenciamento de dados, aplicando boas práticas para assegurar eficiência e integridade. Dedico-me a desenvolver habilidades que permitam a criação de soluções eficazes e bem estruturadas para atender às necessidades de projetos modernos.</p>
+                </div>
+                <div class="Especialidades-box">
+                    <i class="bi bi-award-fill"></i>
+                    <h3>BACK-END.</h3>
+                    <p>Tenho conhecimentos em banco de dados e estou em processo de aprendizado contínuo nessa área. Foco em aplicar boas práticas para assegurar eficiência e integridade, desenvolvendo habilidades para criar soluções eficazes e bem estruturadas que atendam às necessidades de projetos modernos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="Sobre">
+        <div class="interface">
+            <div class="flex">
+                <div class="img-Sobre">
+                    <img src="images/minha foto.png" alt="">
+                </div>
+                <div class="txt-Sobre">
+                    <h2>MUITO PRAZER, <span>SOU ANNA VITÓRIA VIANA</span></h2>
+                    <p>Olá! Sou Anna Vitória Viana, estudante do 4º semestre de Análise e Desenvolvimento de Sistemas, com 19 anos e uma grande paixão por tecnologia. Adoro desafios e me dedicar a encontrar soluções criativas para problemas. Tenho experiência em front-end, redes e estou me especializando em desenvolvimento back-end.</p>
+
+                    <p>Minhas habilidades incluem HTML, CSS, JavaScript, Python, POO em Java, e conhecimentos sobre APIs, frameworks e design gráfico. Estou sempre em busca de aprender mais e contribuir com inovação na área de tecnologia.</p>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="Portifolio">
+        <div class="interface">
+            <h2 class="título">MEUS <span>PROJETOS.</span></h2>
+            <div class="flex">
+                <!-- Projeto 1 -->
+                <a href="https://sites.google.com/view/offroadsagenciadeviagem/in%C3%ADcio" target="_blank" class="img-port" style="background-image: url(images/Design\ sem\ nome.png);">
+                    <div class="overlay">Projeto 1</div> 
+                </a>
+                
+                <!-- Projeto 2 -->
+                <a href=" https://annavitoriaviana.github.io/FakeNewsprof/" target="_blank" class="img-port" style="background-image: url(images/fakenews.png);">
+                    <div class="overlay">Projeto 2</div>
+                </a>
+                
+                <!-- Projeto 3 -->
+                <a href="https://annavitoriaviana.github.io/noticiascertas/" target="_blank" class="img-port" style="background-image: url(images/pedidopng.png);">
+                    <div class="overlay">Projeto 3</div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+                
+            </div>
+        </div>
+        <button class="top-button" onclick="scrollToTop()">Voltar ao Início</button>
+        <script>
+            const topButton = document.querySelector('.top-button');
+          
+            // Mostrar o botão ao rolar a página
+            window.addEventListener('scroll', () => {
+              if (window.scrollY > 300) {
+                topButton.style.display = 'block';
+              } else {
+                topButton.style.display = 'none';
+              }
+            });
+          
+            // Função para voltar ao topo
+            function scrollToTop() {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          </script>
+          
+    </section>
+</main>
+
+<footer>
+    <div class="interface">
+        <div class="line-footer">
+            <div class="flex">
+                <div class="logo-footer">
+                    <img src="images/logobranca.png" alt="Minha logo">
+                </div>
+            </div>
+        </div>
+        <div class="line-footer borda">
+            <p class="email"><i class="bi bi-envelope-fill"></i><a href="mailto:annavitoriavianad@gmail.com">annavitoriavianad@gmail.com</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter Egg - Clique no Balão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+    </div>
+</section>
+
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
